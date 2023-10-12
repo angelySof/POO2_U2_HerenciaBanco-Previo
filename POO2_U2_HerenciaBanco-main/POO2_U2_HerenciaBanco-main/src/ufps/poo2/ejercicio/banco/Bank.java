@@ -126,22 +126,19 @@ public class Bank {
 			if (account instanceof SavingAccount) {
 				SavingAccount cuentaAhorros = (SavingAccount) account;
 				if (cuentaAhorros.getAccountNumber() == accnum) {
-					Account cuenta = cuentaAhorros;
-					return Double.toString(cuenta.getBalance());
+					return Double.toString(cuentaAhorros.obtenerSaldo());
 				}
 			}
 			if (account instanceof CurrentAccount) {
 				CurrentAccount cuentaCorriente = (CurrentAccount) account;
 				if (cuentaCorriente.getAccountNumber() == accnum) {
-					Account cuenta = cuentaCorriente;
-					return Double.toString(cuenta.getBalance());
+					return Double.toString(cuentaCorriente.obtenerSaldo());
 				}
 			}
 			if (account instanceof Cdt) {
 				Cdt cuentaCdt = (Cdt) account;
 				if (cuentaCdt.getAccountNumber() == accnum) {
-					Account cuenta = cuentaCdt;
-					return Double.toString(cuenta.getBalance());
+					return Double.toString(cuentaCdt.obtenerSaldo());
 				}
 			}
 		}
